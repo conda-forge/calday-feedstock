@@ -1,6 +1,7 @@
 context:
   name: calday
-  version: "1.0.0"
+  version: "1.1.0"
+  python_min: "3.12"
 
 package:
   name: ${{ name }}
@@ -8,7 +9,7 @@ package:
 
 source:
   url: https://gitlab.com/earthscope/public/epic/passoft/calday/-/archive/v${{ version }}/calday-v${{ version }}.tar.gz
-  sha256: 9059454355469ef3ea93d8cd0566004ea605a5c9205f210e4bb94826bf969b18
+  sha256: a8eac5df6b839a734dc5b6a278be61d397ddf514052429379e8a82c807f93f43
 
 build:
   noarch: python
@@ -22,7 +23,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - setuptools
+    - setuptools >=77
   run:
     - python >=${{ python_min }}
 
